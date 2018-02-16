@@ -169,7 +169,7 @@
 
   **Part 8 (Optional) - DevTools**
   
-33.  Often while developing we need to run an application, then make some changes, then restart.  The Spring Boot "DevTools" dependency can make things easier by automatically restarting when changes are detected.  Observer we have added the following dependency: 
+33.  Often while developing we need to run an application, then make some changes, then restart.  The Spring Boot "DevTools" dependency can make things easier by automatically restarting when changes are detected.  Observe we have added the following dependency: 
 
   ```
     <dependency>
