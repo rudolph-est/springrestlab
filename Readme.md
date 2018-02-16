@@ -158,7 +158,7 @@
   - [/info](http://localhost:8080/info)
   - [/health](http://localhost:8080/health)
 
-30.  Notice that some other actuator endpoints are not enabled by default.  Try the following - they won't work, but take a close look at the reason why - exposing these could be a security risk:
+30.  Some other actuator endpoints are not usually enabled by default. Exposing these could be a security risk:
   - [/beans](http://localhost:8080/beans)
   - [/configprops](http://localhost:8080/configprops)
   - [/autoconfig](http://localhost:8080/autoconfig)
