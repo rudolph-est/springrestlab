@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Team Database</title>
+    <!-- 	<link rel="stylesheet" type="text/css" href="styles.css"/>
+     --></head>
+<body>
+<header>
+    <h1>Teams in the database</h1>
+</header>
+
+<a th:each="team: ${teamsAsCollection}">
+    <div th:text="${team.name}"></div>
+</a>
+
+</body>
+</html>
