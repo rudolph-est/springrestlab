@@ -1,7 +1,5 @@
 ## Lab - Spring Boot
 
-- In this exercise you will create a simple Spring Boot application.  If you feel you already have a good understanding of Spring Boot you can skip this exercise.  All other exercises in this course will assume you know Spring Boot.
-
 **Part 1 - Simple Web Application**
 
 1.  Using the supplied base project run "mvn install" and confirm the maven has no errors
@@ -171,7 +169,7 @@
 
   **Part 8 (Optional) - DevTools**
   
-33.  Often while developing we need to run an application, then make some changes, then restart.  The Spring Boot "DevTools" dependency can make things easier by automatically restarting when changes are detected  (though it is not as full-featured as other tools like JRebel).  Add the following dependency: 
+33.  Often while developing we need to run an application, then make some changes, then restart.  The Spring Boot "DevTools" dependency can make things easier by automatically restarting when changes are detected.  Add the following dependency: 
 
   ```
     <dependency>
@@ -183,6 +181,3 @@
   
 34.  While your application is running, make a small, innocent change to some code (like a comment or spacing).  Observe that depending on the change, DevTools will restart your application.  
 
-Tips:
-- When running in Eclipse or STS, you can get automatic hot-swapping of many code changes without DevTools if you "debug" the application rather than "run" it.
-- If you encounter unusual issues in the upcoming labs, it may be useful to remove the DevTools dependency to see if the problem persists.
