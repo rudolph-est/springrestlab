@@ -42,10 +42,4 @@ public class ApplicationTests {
 
     }
 
-    @Test
-    public void playerRetrieve() throws Exception {
-
-	
-    }
-
 }
