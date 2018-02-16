@@ -2,7 +2,7 @@
 
 **Part 1 - Simple Web Application**
 
-1.  Using the supplied base project run "mvn install" and confirm the maven has no errors
+1.  Using the supplied base project run "mvn install" and confirm that maven has no errors
 
 2.  Create a new Controller in the base package:
   - Name the controller anything you like.  
