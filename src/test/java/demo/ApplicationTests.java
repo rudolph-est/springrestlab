@@ -35,17 +35,37 @@ public class ApplicationTests {
     @Test
     public void teamsRetrieve() throws Exception {
 
+        //	Ensure that everything works when we do a GET for all teams:
+        mockMvc.perform(get("/teams"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].id").value(1))
+                .andExpect(jsonPath("$[0].name").value("Globetrotters"))
+                .andExpect(jsonPath("$[0].location").value("Harlem"))
+                .andExpect(jsonPath("$[0].players[*].name", containsInAnyOrder("Dizzy", "Buckets", "Big Easy")))
+        ;
     }
 
     @Test
     public void teamRetrieve() throws Exception {
 
+        //	Ensure that everything works when we do a GET for a specific team.
+        mockMvc.perform(get("/teams/1"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(1))
+                .andExpect(jsonPath("$.name").value("Globetrotters"))
+                .andExpect(jsonPath("$.location").value("Harlem"))
+                .andExpect(jsonPath("$.players[*].name", containsInAnyOrder("Dizzy", "Buckets", "Big Easy")))
+        ;
     }
 
     @Test
     public void playerRetrieve() throws Exception {
 
-	
+        //	Ensure that everything works when we do a GET for a specific team.
+        mockMvc.perform(get("/teams/1/players/2"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.name").value("Big Easy"))
+        ;
     }
 
 }
