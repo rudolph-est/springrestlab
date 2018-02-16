@@ -2,7 +2,7 @@
 
 **Part 1 - Simple Web Application**
 
-1.  Using the supplied base project run "mvn install" and confirm that maven has no errors
+1.  Using the supplied base project run "mvn install" and confirm that maven has no errors.
 
 2.  Create a new Controller in the base package:
   - Name the controller anything you like.  
@@ -140,7 +140,7 @@
 
 
   **Part 6 - Add Spring Data REST**
-24.  Open the project's POM.  Add a dependency for group org.springframework.boot and artifact spring-boot-starter-data-rest.  Save your work.
+24.  Open the project's POM.  There should be a dependency for group org.springframework.boot and artifact spring-boot-starter-data-rest.
 
 25.  Open TeamRepository.  Add a @RestResource(path="teams", rel="team") annotation to the interface.
 
@@ -163,13 +163,13 @@
   - [/configprops](http://localhost:8080/configprops)
   - [/autoconfig](http://localhost:8080/autoconfig)
 
-31.  Enable these actuator endpoints by modifying your POM: Add a dependency for group org.springframework.boot and artifact spring-boot-starter-security.  Save your work and restart.   Look at the console output for "default security password".  Copy this randomly-generated password, then browse to endpoints listed above, using "user" for username and paste the value for password.  (Note that this password will regenerate on each restart, set security.user.name and security.user.password to establish static values).
+31.  We enabled these actuator endpoints by adding a dependency to our POM: Observe we have a dependency for group org.springframework.boot and artifact spring-boot-starter-security.  Look at the console output for "default security password".  Copy this randomly-generated password, then browse to endpoints listed above, using "user" for username and paste the value for password.  (Note that this password will regenerate on each restart, set security.user.name and security.user.password to establish static values).
 
 32.  Explore [/mappings](http://localhost:8080/mappings).  Does it show you any other useful endpoints you would like to try?
 
   **Part 8 (Optional) - DevTools**
   
-33.  Often while developing we need to run an application, then make some changes, then restart.  The Spring Boot "DevTools" dependency can make things easier by automatically restarting when changes are detected.  Add the following dependency: 
+33.  Often while developing we need to run an application, then make some changes, then restart.  The Spring Boot "DevTools" dependency can make things easier by automatically restarting when changes are detected.  Observer we have added the following dependency: 
 
   ```
     <dependency>
