@@ -4,7 +4,7 @@
 
 1.  Using the supplied base project run "mvn install" and confirm that maven has no errors.
 
-2.  Create a new Controller in the base package:
+2.  Create a new Controller in the "demo" package:
   - Name the controller anything you like.  
   - Annotate the Controller with @Controller.
 
@@ -61,7 +61,7 @@
 
   **Part 3 - Create Spring Data JPA Repositories**
   
-13.  Return to the Team class.  Add required JPA annotations:  The class must be annotated with @Entity, the id must be annotated with @Id and @GeneratedValue.
+13.  Return to the Team class.  Add required JPA annotations:  The class must be annotated with @Entity, the id must be annotated with @Id and @GeneratedValue (Make sure you include the import javax.persistence.* )
 
 14.  Create a new Interface called "TeamRepository".  Have it extend CrudRepository<Team,Long>.
   - Be sure to create this as an Interface, not a Class!
@@ -90,12 +90,13 @@
 17.  Return to the TeamController.  Use @Autowired to dependency inject a TeamRepository variable.  Name the variable anything you like (may I suggest: "teamRepository").
 
 18.  Alter the logic in your controller method to simply return the result of the repository's findAll() method:
-  ```
-	@GetMapping("/teams")
-	public Iterable<Team> getTeams() {
-		return teamRepository.findAll();
-	}
-  ```
+   ```
+   @GetMapping("/teams")
+   public Iterable<Team> getTeams() {
+   	return teamRepository.findAll();
+   }
+   ```
+
 19.  Save all work.  Stop the application if it is already running, and start it again.  Open [http://localhost:8080/teams](http://localhost:8080/teams).  You should see a JSON response with your teams' data.
 
 
