@@ -140,7 +140,8 @@
 23.  Save all work.  Restart the application.  Open [http://localhost:8080/teams](http://localhost:8080/teams) to see the players.
 
 
-  **Part 6 - Add Spring Data REST**
+**Part 6 - Add Spring Data REST**
+  
 24.  Open the project's POM.  There should be a dependency for group org.springframework.boot and artifact spring-boot-starter-data-rest.
 
 25.  Open TeamRepository.  Add a @RestResource(path="teams", rel="team") annotation to the interface.
@@ -151,9 +152,9 @@
 
 28.  Save all work.  Restart the application.  Open [http://localhost:8080/teams](http://localhost:8080/teams) to see the players.  Note that (depending on the browser you are using) you can navigate the links for players and teams.
 
-  If you have reached this point, Congratulations, you have finished the exercise!
+If you have reached this point, Congratulations, you have finished the exercise!
 
-  **Part 7 (Optional) - Explore the Actuator Endpoints**
+**Part 7 (Optional) - Explore the Actuator Endpoints**
 
 29.  One of the dependencies we specified was Actuator.  It automatically adds some useful endpoints to our web application.  Open the following with a browser:
   - [/info](http://localhost:8080/info)
