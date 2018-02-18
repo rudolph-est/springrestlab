@@ -25,7 +25,7 @@
 7.  Open a browser to [http://localhost:8080/](http://localhost:8080/).  You should see your web page.
 
 
-  **Part 2 - Return a RESTful Response**
+**Part 2 - Return a RESTful Response**
 
 9.  Create a new Java class called "Team" in the base package.  Give it a Long field for id, and String fields for name, location, and mascot (or whatever other properties you like).  Generate "getters and setters" for all fields. Save your work.
 
@@ -59,7 +59,7 @@
 
 12.  Save all work.  Stop the application if it is already running, and start it again.  Open [http://localhost:8080/teams](http://localhost:8080/teams).  You should see a JSON response with your teams' data.
 
-  **Part 3 - Create Spring Data JPA Repositories**
+**Part 3 - Create Spring Data JPA Repositories**
   
 13.  Return to the Team class.  Add required JPA annotations:  The class must be annotated with @Entity, the id must be annotated with @Id and @GeneratedValue (Make sure you include the import javax.persistence.* )
 
@@ -100,7 +100,7 @@
 19.  Save all work.  Stop the application if it is already running, and start it again.  Open [http://localhost:8080/teams](http://localhost:8080/teams).  You should see a JSON response with your teams' data.
 
 
-  **Part 4 (Optional)- Create a Single Team endpoint**
+**Part 4 (Optional)- Create a Single Team endpoint**
 
 20.  Return to the TeamController and add a method that returns a single Team given an ID.
   - Name the method anything you like.  Suggestion: getTeam.
@@ -112,7 +112,7 @@
 19.  Save all work.  Stop the application if it is already running, and start it again.  Use [http://localhost:8080/teams](http://localhost:8080/teams) to note the generated ID values for each Team.  Then use URLs such as  [http://localhost:8080/teams/1](http://localhost:8080/teams/1) or [http://localhost:8080/teams/2](http://localhost:8080/teams/2) to get results for the individual teams.
 
   
-  **Part 5 - Add Players**
+**Part 5 - Add Players**
 
 20.  Add a new class named Player.  Add fields for id, name, and position.  The id should be Long, and other fields can be Strings.  Generate getters / setters for each field.  Add an @Entity annotation on the class, and @Id and @GeneratedValue annotations on the id.   You may wish to add a custom constructor to make it easy to create a Player object by supplying name and position Strings.  (If you do this, be sure to retain a default constructor).  Save your work.
 
@@ -139,8 +139,8 @@
 
 23.  Save all work.  Restart the application.  Open [http://localhost:8080/teams](http://localhost:8080/teams) to see the players.
 
+**Part 6 - Add Spring Data REST**
 
-  **Part 6 - Add Spring Data REST**
 24.  Open the project's POM.  There should be a dependency for group org.springframework.boot and artifact spring-boot-starter-data-rest.
 
 25.  Open TeamRepository.  Add a @RestResource(path="teams", rel="team") annotation to the interface.
@@ -153,7 +153,7 @@
 
   If you have reached this point, Congratulations, you have finished the exercise!
 
-  **Part 7 (Optional) - Explore the Actuator Endpoints**
+**Part 7 (Optional) - Explore the Actuator Endpoints**
 
 29.  One of the dependencies we specified was Actuator.  It automatically adds some useful endpoints to our web application.  Open the following with a browser:
   - [/info](http://localhost:8080/info)
@@ -168,7 +168,7 @@
 
 32.  Explore [/mappings](http://localhost:8080/mappings).  Does it show you any other useful endpoints you would like to try?
 
-  **Part 8 (Optional) - DevTools**
+**Part 8 (Optional) - DevTools**
   
 33.  Often while developing we need to run an application, then make some changes, then restart.  The Spring Boot "DevTools" dependency can make things easier by automatically restarting when changes are detected.  Observe we have added the following dependency: 
 
